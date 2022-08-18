@@ -137,7 +137,7 @@ final class UpdateJob
 
         $requests = [];
         foreach ($objectsToSave as $objectToSave) {
-            $requests += [
+            $requests[] = [
                 'action' => 'addObject',
                 'body' => $objectToSave
             ];

@@ -95,7 +95,7 @@ final class ReImportCommand extends Command
             $config->set('scout.queue', $useQueues);
 
             tap($this->output)->progressAdvance()
-                ->text("Replacing index <info>{$index->getIndexName()}</info> by index <info>{$temporaryName}</info>");
+                ->text("Replacing index <info>{$index}</info> by index <info>{$temporaryName}</info>");
 
             try {
                 $client->getSettings($temporaryName);
